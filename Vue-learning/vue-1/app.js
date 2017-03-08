@@ -24,13 +24,13 @@ p.convert = function (key, val) {
     enumerable: true,
     configurable: false,
     get: function () {
-      document.write('你访问了：' + key + '</br>');
+      console.log('你访问了：' + key);
       return val
     },
 
     set: function (newVal) {
-     document.write('你设置了'+ key);
-     document.write('新的'+ key + ' = ' + newVal  + '</br>')
+     console.log('你设置了'+ key);
+     console.log('新的'+ key + ' = ' + newVal )
       if (newVal === val) return
         val = newVal
     }
@@ -38,9 +38,15 @@ p.convert = function (key, val) {
 }
 
 let data = {
+  a: 1,
+  b: 2,
   user: {
     name: 'jo',
     age: '21',
+    try: {
+      try1: 'm1',
+      try2: 'm3'
+    }
   },
 
   address: {
