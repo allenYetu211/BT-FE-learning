@@ -77,7 +77,7 @@ class Events {
 
   emit(attr, ...arg) {
     this.events[attr] && this.events[attr].forEach((item) => {
-      
+
       item(...arg)
     })
   }
@@ -150,4 +150,12 @@ _p.$watch('age', function(oldVal, newVal){
 
 _p.$watch('age', function(oldVal, newVal){
     console.log(`我的年龄真的变了诶，竟然年轻了${oldVal - newVal}岁`)
+})
+
+_p.$watch('info', function(oldVal, newVal){
+    console.log(`触发了infor`)
+})
+
+_p.$watch('info', function(oldVal, newVal){
+    console.log(`触发了infor`)
 })
